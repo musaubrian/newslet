@@ -13,5 +13,8 @@ export default defineNuxtConfig({
                 href: 'https://fonts.googleapis.com/icon?family=Material+Icons'}
             ]
         }
+    },
+    runtimeConfig: {
+        newsApiKey: process.env.NEWS_API_KEY
     }
 })
