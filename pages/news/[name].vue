@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>single news page</h1>
-        <p>Id of {{ id }}</p>
+        <p>Id of {{ name }}</p>
 
     </div>
 </template>
@@ -11,5 +11,5 @@ definePageMeta({
     layout: 'news'
 })
 
-const { id } = useRoute().params
+const { name } = useRoute().params
 </script>

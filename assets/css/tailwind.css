@@ -1,9 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Varela Round", sans-serif;
+}
 @layer components {
   .btn {
     @apply bg-sky-500 p-3 rounded-lg text-gray-100 text-xl font-semibold inline-flex items-center justify-evenly;
+  }
+  .lnks {
+    @apply px-3 py-2 hover:text-sky-600 transition-all;
   }
 }
