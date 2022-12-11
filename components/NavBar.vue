@@ -6,7 +6,7 @@
                     <NuxtLink to="/">Home</NuxtLink>
                 </li>
                 <li class="px-3 py-2 hover:text-sky-600 transition-ease duration-500">
-                    <NuxtLink to="/search">Search</NuxtLink>
+                    <NuxtLink to="/news">news</NuxtLink>
                 </li>
             </ul>
         </div>
