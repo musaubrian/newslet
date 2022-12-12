@@ -28,5 +28,5 @@
 
 <script setup>
 const isActive = ref(false);
-
+const { selectedCategory } = defineProps(["selecetedCategory"])
 </script>
