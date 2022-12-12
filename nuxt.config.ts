@@ -3,10 +3,11 @@ export default defineNuxtConfig({
     modules: ['@nuxtjs/tailwindcss'],
     app: {
         head: {
-            title: 'Newslet | news',
+            title: 'NewsPulse | news',
             meta: [
                 { charset: 'utf-8' },
-                {name: 'description', content: 'Your home for top news for free.'}
+                {name: 'description', content: 'Get top headlines in bite size form'},
+                { name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
             ],
             link: [
                 {rel: 'stylesheet', type: 'text/css',
