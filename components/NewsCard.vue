@@ -1,5 +1,6 @@
 <template>
-    <img :src=article.urlToImage alt="news thumbnail" class="w-full object-cover md:h-52">
+    <img v-if="article.urlToImage" :src=article.urlToImage alt="news thumbnail" class="images">
+    <img v-else src="../assets/images/notfound.png" class="images" />
     <div class="px-5 my-3">
         <h1 class="
             text-gray-700 font-semibold text-xl">{{ article.title }}</h1>
