@@ -5,57 +5,56 @@
                 <h1 class="text-gray-700 full text-2xl font-bold text-center">Category</h1>
             </div>
             <div class="md:w-3/6 mt-2 w-full inline-flex justify-center items-center">
-                <select name="categories" id="categories"
+                <select name="categories" v-model="category" @change="checkUpdate"
                     class="ml-2 p-1 bg-transparent text-center w-full border-2 capitalize rounded-lg border-sky-600 text-xl text-gray-700 font-semibold">
-                    <option value="general" selected class="options">general</option>
+                    <option value="business" class="options" selected>business</option>
                     <option value="sports" class="options">sports</option>
-                    <option value="business" class="options">business</option>
                     <option value="health" class="options">health</option>
                     <option value="science" class="options">science</option>
                     <option value="technology" class="options">technology</option>
-                    <option value="etnertainment" class="options">entertainment</option>
                 </select>
             </div>
 
         </div>
-        <div v-if="pending"
-            class="text-xl font-semibold text-orange-400 text-center h-[50vh] flex items-center justify-center">
-            <h1>Be patient as we fetch your news...</h1>
-        </div>
+        <Loading v-if="fetchStatus" />
+        <FetchError v-if="error" />
         <div class="grid md:grid-cols-2 gap-4 grid-cols-1 my-3">
-            <div v-for="article in articles" :key="article.title"
+            <div v-for="article in articlesStore.articles" :key="article.title"
                 class="bg-slate-200 text-center rounded-lg overflow-hidden my-2 shadow-lg">
                 <NewsCard :article="article" />
             </div>
         </div>
+        <button @click="articlesStore.fetchArticles()">fetch</button>
     </div>
 
 </template>
 
-<script setup>
-const { newsApiKey } = useRuntimeConfig();
-
-const isActive = ref(false);
-let selectedCategory = ref('general')
-
-let articles = [];
-
-const authHeaders = {
-    headers: {
-        Authorization: newsApiKey,
+<script>
+import { useArticlesStore } from "/stores/articles.js"
+export default {
+    data() {
+        return {
+            category: 'business'
+        }
     },
-};
+    methods: {
+        checkUpdate() {
+            const articlesStore = useArticlesStore();
+            articlesStore.selectedCategory = this.category
+            articlesStore.updateCategory()
+        },
+    },
+    setup() {
+        const articlesStore = useArticlesStore();
+        articlesStore.fetchArticles
 
-const updateCategory = (category) => {
-    selectedCategory.value = category
-    return category;
+        const fetchStatus = articlesStore.fetchStatus
+        const error = articlesStore.fetchError
+        return {
+            articlesStore,
+            fetchStatus,
+            error
+        }
+    }
 }
-
-const uri = `https://newsapi.org/v2/top-headlines?category=${selectedCategory.value}&language=en`
-
-const { data, pending } = await useFetch(uri, authHeaders, { key: selectedCategory.value });
-articles = data.value.articles
-
-
-
 </script>
