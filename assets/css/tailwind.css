@@ -19,4 +19,7 @@ body {
   .images {
     @apply w-full object-cover md:h-52 h-48;
   }
+  .options {
+    @apply bg-slate-300 text-gray-700 text-xl mt-5;
+  }
 }
