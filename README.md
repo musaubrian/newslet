@@ -3,9 +3,11 @@
   <a href="#" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
-  <a href="https://twitter.com/\_musaubrian" target="_blank">
-    <img alt="Twitter: \_musaubrian" src="https://img.shields.io/twitter/follow/\_musaubrian.svg?style=social" />
+  <a href="https://twitter.com/_musaubrian" target="_blank">
+    <img alt="Twitter: \_musaubrian" src="https://img.shields.io/twitter/follow/_musaubrian.svg?style=social" />
   </a>
+
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/929b8d52-3a42-4201-aada-f06368afb603/deploy-status)](https://app.netlify.com/sites/newspulse/deploys)
 </p>
 
 > Get top headlines in different new categories
