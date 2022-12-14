@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { useLocalStorage } from "@vueuse/core";
+import { useLocalStorage } from "@vueuse/nuxt";
 
 export const useArticlesStore = defineStore("articles", {
   state: () => ({
