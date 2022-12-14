@@ -10,7 +10,7 @@
   [![Netlify Status](https://api.netlify.com/api/v1/badges/929b8d52-3a42-4201-aada-f06368afb603/deploy-status)](https://app.netlify.com/sites/newspulse/deploys)
 </p>
 
-> Get top headlines in different new categories
+> Get top headlines in different news categories
 
 ### 🏠 [Homepage](https://newspulse.netlify.app)
 
