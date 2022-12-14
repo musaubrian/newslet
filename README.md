@@ -1,42 +1,41 @@
-# Nuxt 3 Minimal Starter
+<h1 align="center">Welcome to newslet 👋</h1>
+<p>
+  <a href="#" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+  <a href="https://twitter.com/\_musaubrian" target="_blank">
+    <img alt="Twitter: \_musaubrian" src="https://img.shields.io/twitter/follow/\_musaubrian.svg?style=social" />
+  </a>
+</p>
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+> Get top headlines in different new categories
 
-## Setup
+### 🏠 [Homepage](https://newspulse.netlify.app)
 
-Make sure to install the dependencies:
+## Install
 
-```bash
-# yarn
+```sh
 yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
 ```
 
-## Development Server
+## Usage
 
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
+```sh
+yarn run dev
 ```
 
-## Production
+## Author
 
-Build the application for production:
+👤 **Ernest(musaubrian)**
 
-```bash
-npm run build
-```
+* Website: musaubrian.netlify.app
+* Twitter: [@\_musaubrian](https://twitter.com/_musaubrian)
+* Github: [@musaubrian](https://github.com/musaubrian)
+* LinkedIn: [@ernest-musau](https://linkedin.com/in/ernest-musau)
 
-Locally preview production build:
+## Show your support
 
-```bash
-npm run preview
-```
+Give a ⭐️ if this project helped you!
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

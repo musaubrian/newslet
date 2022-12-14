@@ -17,9 +17,14 @@ export const useArticlesStore = defineStore("articles", {
         },
       };
       const uri = `https://newsapi.org/v2/top-headlines?category=${this.selectedCategory}&language=en`;
-      const { data, pending, error } = await useFetch(uri, authHeaders, {
-        key: this.selectedCategory,
-      });
+      const { data, pending, error, refresh } = await useFetch(
+        uri,
+        authHeaders,
+        {
+          key: this.selectedCategory,
+        }
+      );
+      refresh();
       this.articles = data.value.articles;
       this.fetchError = error;
       this.fetching = pending;
