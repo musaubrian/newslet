@@ -24,7 +24,6 @@
                 <NewsCard :article="article" />
             </div>
         </div>
-        <button @click="articlesStore.fetchArticles()">fetch</button>
     </div>
 
 </template>
@@ -34,7 +33,7 @@ import { useArticlesStore } from "/stores/articles.js"
 export default {
     data() {
         return {
-            category: 'business'
+            category: "business",
         }
     },
     methods: {
